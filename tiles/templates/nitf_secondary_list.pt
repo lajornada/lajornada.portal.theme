@@ -1,0 +1,26 @@
+<div class="sortable-tile vtv-nitf-secondary">
+    <tal:items repeat="obj view/results">
+    <div class="vtv-nitf-secondary-item"
+        tal:attributes="data-uid python:view.get_uid(obj)"
+	tal:define="article_url obj/absolute_url" style="position:relative">
+	<div class="vtv-nitf-data">
+
+            <article class="clArticleSecondary">
+		<h1>
+	            <a href="#" tal:attributes="href article_url" tal:content="obj/Title"/>
+		</h1>
+		<div class="clArticleImageSecondary">
+                    <span class="clSpanImageSecondary" tal:content="structure python: obj.tag(scale='preview')"></span>
+    		    <p tal:content="obj/description"></p>
+		</div>
+            </article>
+            <div class="credito-primera">
+                <div class="pleca">
+                    <span class="pleca-spacer"></span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </tal:items>
+</div>

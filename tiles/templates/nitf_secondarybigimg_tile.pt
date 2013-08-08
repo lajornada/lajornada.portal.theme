@@ -1,0 +1,14 @@
+<div class="clNotaSecondaryBigImg" tal:define="nitf view/result">
+ <article class="clArticleaSecondaryBigImg">
+	<tal:exist condition="nitf">
+		<h1 tal:content="nitf/title"></h1>
+		<div class="clArticleImageaSecondaryBigImg">
+                  <span class="clSpanSecondaryBigImg" tal:content="structure python: nitf.tag(scale='preview')"></span>
+                  <p tal:content="nitf/description"></p>
+		</div>
+	</tal:exist>
+	<tal:notexit condition="not:nitf">
+ 	 <p>No hay ningún ítem de Noticia Secundaria con imagen grande cargado. Agregue uno!</p>
+	</tal:notexit>
+ </article>
+</div>

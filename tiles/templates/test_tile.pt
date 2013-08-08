@@ -1,0 +1,3 @@
+<div id="test-tile">
+ <p tal:content="view/get_name"></p>
+</div>

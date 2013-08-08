@@ -1,0 +1,3 @@
+<div id="add-videos" tal:condition="exists:view/view/w/IAddableVideos.relatedVideos">
+        <tal:relatedvideos tal:content="structure view/view/w/IAddableVideos.relatedVideos/render" />
+</div>

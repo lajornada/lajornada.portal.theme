@@ -1,0 +1,24 @@
+<div>Videos en la Jornada</div>
+<hr/>
+            <tal:items repeat="brain view/results_video">
+            <div
+                tal:attributes="class python:'tile-video-item open' if repeat['brain'].index == 0 else 'tile-video-item'">
+                <div class="tile-video-video"
+                    tal:attributes="class python:'tile-video-video open' if repeat['brain'].index == 0 else 'tile-video-video'">
+                <div class="report-video" tal:attributes="data-slug brain/slug">
+                </div>
+                </div>
+                <div class="tile-video-data" >
+                    <div class="tile-video-title" tal:content="brain/titulo" />
+                    <div class="tile-tags-source" tal:content="brain/tags" />
+                    <div class="tile-slug-source" tal:content="brain/slug" />
+                    <div class="tile-url-source" tal:content="brain/archivo_url" />
+		    <div class="tile-mime-source" tal:content="brain/archivo_video" />
+
+                    <video width="320" height="240" controls>
+                     <source tal:attributes="src brain/archivo_url" type="video/mp4">
+                     Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            </tal:items>

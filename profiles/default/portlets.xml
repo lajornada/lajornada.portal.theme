@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<portlets xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+   i18n:domain="plone">
+ <portlet title="Ultimos elementos NITF"
+    addview="lajornada.porlet.ultimas_nitf"
+    description="A portlet which shows the latest NITF created and can be filtered by section."
+    i18n:attributes="title; description">
+  <for interface="plone.app.portlets.interfaces.IColumn" />
+  <for interface="plone.app.portlets.interfaces.IDashboard" />
+ </portlet>
+
+ <portlet title="Videos Recientes"
+    addview="lajornada.porlet.RecentVideos"
+    description="A portlet which shows the latest videos upload"
+    i18n:attributes="title; description">
+  <for interface="plone.app.portlets.interfaces.IColumn" />
+  <for interface="plone.app.portlets.interfaces.IDashboard" />
+ </portlet>
+</portlets>

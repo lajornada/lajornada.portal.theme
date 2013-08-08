@@ -1,0 +1,28 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="lajornada.portal.theme">
+
+     <plone:portlet
+         name="lajornada.porlet.ultimas_nitf"
+         interface=".ultimas_nitf.IUltimas_NitfPortlet"
+         assignment=".ultimas_nitf.Assignment"
+         edit_permission="cmf.ManagePortal"
+         renderer=".ultimas_nitf.Renderer"
+         addview=".ultimas_nitf.AddForm"
+         editview=".ultimas_nitf.EditForm"
+         />
+
+     <plone:portlet
+         name="lajornada.porlet.RecentVideos"
+         interface=".recent_videos.IRecentVideos"
+         assignment=".recent_videos.Assignment"
+         edit_permission="cmf.ManagePortal"
+         renderer=".recent_videos.Renderer"
+         addview=".recent_videos.AddForm"
+         editview=".recent_videos.EditForm"
+         />
+
+        
+</configure>

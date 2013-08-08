@@ -1,0 +1,15 @@
+<div class="clNotaTertiary" tal:define="nitf view/result">
+ <article class="clArticleTertiary">
+	<tal:exist condition="nitf">
+		<h1 tal:content="nitf/title"></h1>
+		<div class="clArticleImageTertiary">
+                  <span class="clSpanImageTertiary" tal:content="structure python: nitf.tag(scale='preview')"></span>
+
+    		 <p tal:content="nitf/subtitle"></p>
+		</div>
+	</tal:exist>
+	<tal:notexit condition="not:nitf">
+         <p>No hay ningún ítem de Noticia Terciaria cargado, agregue uno!</p>
+	</tal:notexit>
+ </article>
+</div>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<object name="portal_javascripts">
+     <javascript
+        id="++theme++lajornada.portal.theme/scripts/galleria-1.2.7.js"
+        cacheable="True" compression="false" cookable="False"
+        enabled="True" expression="" inline="True"/>
+     <javascript
+        id="++theme++lajornada.portal.theme/scripts/site_v9.0.js"
+        cacheable="True" compression="false" cookable="False"
+        enabled="True" expression="" inline="True"/>
+    <javascript
+        id="++theme++lajornada.portal.theme/scripts/OAS.js"
+        cacheable="True" compression="false" cookable="False"
+        enabled="True" expression="" inline="True"/>
+
+</object>

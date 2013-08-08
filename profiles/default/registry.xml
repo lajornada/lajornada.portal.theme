@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<registry>
+	<record name="openmultimedia.api.interfaces.IAPISettings.url_base">
+        <value>http://video.jornada.com.mx/</value>
+    </record>
+	<record name="plone.app.tiles">
+      <value purge="false">
+        <element>lajornada.tile.nitf_tile</element>
+        <element>lajornada.tile.nitf_secondarybigimg_tile</element>
+        <element>lajornada.tile.nitf_secondary_tile</element>
+        <element>lajornada.tile.nitf_tertiary_tile</element>
+        <element>lajornada.tile.nitf_list</element>
+        <element>lajornada.tile.nitf_secondary_list</element>
+        <element>lajornada.tile.test_tile</element>
+	<element>lajornada.tile.principal_nitf_carousel</element>
+      </value>
+    </record>
+</registry>

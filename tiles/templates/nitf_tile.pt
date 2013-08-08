@@ -1,0 +1,15 @@
+<div class="clNotaPrincipal" tal:define="nitf view/result">
+ <article class="clArticle">
+	<tal:exist condition="nitf">
+		<h1 tal:content="nitf/title"></h1>
+		<div class="clArticleImage">
+                  <span class="clSpanImage" tal:content="structure python: nitf.tag(scale='preview')"></span>
+
+    		 <p tal:content="nitf/description"></p>
+		</div>
+	</tal:exist>
+	<tal:notexit condition="not:nitf">
+ 	 <p>No hay ningún ítem de Noticia Principal cargado, agregue uno!</p>
+	</tal:notexit>
+ </article>
+</div>

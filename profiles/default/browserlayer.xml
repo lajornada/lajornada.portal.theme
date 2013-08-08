@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<layers>
+ <layer name="lajornada.portal.theme"
+        interface="lajornada.portal.theme.interfaces.IThemeSpecific" />
+</layers>

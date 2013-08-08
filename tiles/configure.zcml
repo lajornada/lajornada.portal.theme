@@ -1,0 +1,110 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="lajornada.portal.theme">
+
+    <plone:tile
+        name="lajornada.tile.nitf_tile"
+        title="Noticia principal"
+        description="A tile to display a nitf"
+        icon="++theme++lajornada.portal.theme/images/tile-principal.png"
+        add_permission="cmf.ModifyPortalContent"
+        schema=".test_droppable.INitfTile"
+        class=".test_droppable.NitfTile"
+        permission="zope2.View"
+        for="*"
+        i18n:attributes="title;description"
+        />
+
+    <plone:tile
+        name="lajornada.tile.nitf_secondarybigimg_tile"
+        title="Noticia secundaria img/grande"
+        description="A tile to display a nitf"
+        icon="++theme++lajornada.portal.theme/images/tile-basic.png"
+        add_permission="cmf.ModifyPortalContent"
+        schema=".test_droppable.INitfSecondaryBigImgTile"
+        class=".test_droppable.NitfSecondaryBigImgTile"
+        permission="zope2.View"
+        for="*"
+        i18n:attributes="title;description"
+        />
+
+    <plone:tile
+        name="lajornada.tile.nitf_secondary_tile"
+        title="Noticia secundaria img/chica"
+        description="A tile to display a nitf"
+        icon="++theme++lajornada.portal.theme/images/tile-secundaria.png"
+        add_permission="cmf.ModifyPortalContent"
+        schema=".test_droppable.INitfSecondaryTile"
+        class=".test_droppable.NitfSecondaryTile"
+        permission="zope2.View"
+        for="*"
+        i18n:attributes="title;description"
+        />
+
+    <plone:tile
+        name="lajornada.tile.nitf_tertiary_tile"
+        title="Noticia terciaria"
+        description="A tile to display a nitf"
+        icon="++theme++lajornada.portal.theme/images/tile-terciaria.png"
+        add_permission="cmf.ModifyPortalContent"
+        schema=".test_droppable.INitfTertiaryTile"
+        class=".test_droppable.NitfTertiaryTile"
+        permission="zope2.View"
+        for="*"
+        i18n:attributes="title;description"
+        />
+
+    <plone:tile
+        name="lajornada.tile.nitf_list"
+        title="Lista noticias s/imagen c/pleca"
+        description="A tile to display a list of nitf"
+        icon="++theme++lajornada.portal.theme/images/tile-list-withoutimage.png"
+        add_permission="cmf.ModifyPortalContent"
+        schema=".test_list.INitfList"
+        class=".test_list.NitfList"
+        permission="zope2.View"
+        for="*"
+        i18n:attributes="title;description"
+        />
+
+    <plone:tile
+        name="lajornada.tile.nitf_secondary_list"
+        title="Lista noticias secundarias img/chica"
+        description="A tile to display a list of secondaries nitf"
+        icon="++theme++lajornada.portal.theme/images/tile-list.png"
+        add_permission="cmf.ModifyPortalContent"
+        schema=".secondary_list.INitfSecondaryList"
+        class=".secondary_list.NitfSecondaryList"
+        permission="zope2.View"
+        for="*"
+        i18n:attributes="title;description"
+        />
+
+    <plone:tile
+        name="lajornada.tile.test_tile"
+        title="Título"
+        description="A tile to display a name"
+        add_permission="cmf.ModifyPortalContent"
+        schema=".test_tile.ITestTile"
+        class=".test_tile.TestTile"
+        permission="zope2.View"
+        for="*"
+        i18n:attributes="title;description"
+        />
+
+     <plone:tile
+         name="lajornada.tile.principal_nitf_carousel"
+      	 title="Carousel de noticias principales"
+      	 description="Un tile que muestra un carousel de noticias principales."
+      	 add_permission="cmf.ModifyPortalContent"
+      	 schema=".principal_nitf_carousel.IPrincipalCarouselTile"
+      	 class=".principal_nitf_carousel.PrincipalCarouselTile"
+      	 permission="zope2.View"
+      	 for="*"
+      />
+
+
+</configure>

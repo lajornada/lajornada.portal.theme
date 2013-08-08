@@ -1,0 +1,47 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      tal:omit-tag="">
+<dl class="portlet portletCollection portlet-latest-nitf"
+    i18n:domain="lajornada.portlet"
+    tal:define="section context/request/nitf-section-filter | nothing;
+                portal_state context/@@plone_portal_state;
+                portal_url portal_state/portal_url;">
+
+
+    <div style="text-align:center;">
+
+        <img tal:attributes="src string:${portal_url}/spinner.gif"
+                    alt=""
+                    id="nitf-section-filter-spinner"
+                    style="display:none"/>
+    </div>
+    <div>
+        <table>
+            <tr><th>Titulo</th><th>Descripcion</th></tr>
+            <tal:names repeat="name3 view/result">
+                <tal:objeto define="obj name3/getObject">
+                <tr tal:attributes="class python: 'even' if repeat['name3'].even() else 'odd'">
+                    <td tal:content="name3/Title"></td>
+                    <td>&nbsp;</td>
+                    <td tal:content="name3/Description"></td>
+                    <td>&nbsp;<a tal:attributes="href name3/getURL;
+                    title name3/Title" href="" title="" target="_blank">[enlace]</a></td>
+                    <td tal:content="python: view.get_date(obj)"></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><span tal:content="structure python: obj.tag(scale='thumb')"></span></td>
+                </tr>
+            </tal:objeto>
+            </tal:names>
+    </table>
+    </div>
+
+
+    <dd class="portletFooter">
+        <span class="portletBottomLeft"></span>
+        <span class="portletBottomRight"></span>
+    </dd>
+
+</dl>
+</html>
