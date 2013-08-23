@@ -2,24 +2,25 @@
     xmlns="http://namespaces.plone.org/diazo"
     xmlns:css="http://namespaces.plone.org/diazo/css"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <rules css:if-content="#visual-portal-wrapper">
-        <theme href="index.html" css:if-content="#visual-portal-wrapper" />
-        <!--Plone.app.toolbar-->
-        <append theme="/html/body" content="//div[@data-iframe='toolbar']" />
-	<!--Head-->
-	<copy css:content="html" css:theme="html" attributes="lang dir" />
-	<before css:content="head style, head link, head script, head meta" css:theme-children="head" />
-	<replace css:content="head title" css:theme="head title" />
-	<copy css:content="head base" css:theme="head base" />
-	<drop css:content="head link[rel='shortcut icon']" />
-	<drop css:content="head link[rel='apple-touch-icon']" />
-	<!--Content-->
-	<merge attributes="class" css:content="body" css:theme="body" />
-	<copy attributes="id dir" css:content="body" css:theme="body" />
-        <copy attributes="role" css:content="content" css:theme="contentspace" />
-	<replace attributes="class" css:content="#portal-column-content" css:theme="#idMainBodyContainer" />
-	<replace css:content="#portal-column-content" css:theme="#idMainBodyContainer" />
 
-
-    </rules>
+  <rules css:if-content="#visual-portal-wrapper">
+    <theme href="index.html" if-path="Plone/" />
+    <theme href="nota.html" />
+    <!--Plone.app.toolbar-->
+    <append theme="/html/body" content="//div[@data-iframe='toolbar']" />
+    <!--Head-->
+    <copy css:content="html" css:theme="html" attributes="lang dir" />
+    <before css:content="head style, head link, head script, head meta" css:theme-children="head" />
+    <replace css:content="head title" css:theme="head title" />
+    <copy css:content="head base" css:theme="head base" />
+    <drop css:content="head link[rel='shortcut icon']" />
+    <drop css:content="head link[rel='apple-touch-icon']" />
+    <!--Content-->
+    <merge attributes="class" css:content="body" css:theme="body" />
+    <copy attributes="id dir" css:content="body" css:theme="body" />
+    <replace attributes="class" css:content="#portal-column-content" css:theme="#idMain-body-up" />
+    <replace css:content="#portal-column-content" css:theme="#idMain-body-up" />    
+    <after css:content="#portal-column-one" css:theme="#idMain-body-up" />
+    <after css:content="#portal-column-two" css:theme="#idMain-body-up" />
+  </rules>   
 </rules>

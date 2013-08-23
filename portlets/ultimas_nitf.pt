@@ -2,41 +2,57 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       tal:omit-tag="">
-<dl class="portlet portletCollection portlet-latest-nitf"
+<dl 
     i18n:domain="lajornada.portlet"
     tal:define="section context/request/nitf-section-filter | nothing;
                 portal_state context/@@plone_portal_state;
                 portal_url portal_state/portal_url;">
 
+    <div class="portlet_ultimasnitf">
 
-    <div style="text-align:center;">
+ <table width="370px"><tr><td align="center" style="padding-bottom:20px"><img src="++theme++lajornada.portal.theme/imagenes/publicidad3.png" /></td></tr></table>      
 
-        <img tal:attributes="src string:${portal_url}/spinner.gif"
-                    alt=""
-                    id="nitf-section-filter-spinner"
-                    style="display:none"/>
-    </div>
-    <div>
+
+<!-- VISUALIZACION 2 PARA EL PORTLET-->
+ <table width="370px">
+	  <tr><td width="50px"  style="padding-left:20px;background-color:#1B65AC"></td><td style="padding-left:10px"><span class="portlet_title">ARTICULOS RELACIONADOS</span></td></tr>
+	  <tr><td colspan="2">&nbsp;</td></tr>
+	</table>
         <table>
-            <tr><th>Titulo</th><th>Descripcion</th></tr>
             <tal:names repeat="name3 view/result">
                 <tal:objeto define="obj name3/getObject">
                 <tr tal:attributes="class python: 'even' if repeat['name3'].even() else 'odd'">
-                    <td tal:content="name3/Title"></td>
-                    <td>&nbsp;</td>
-                    <td tal:content="name3/Description"></td>
-                    <td>&nbsp;<a tal:attributes="href name3/getURL;
-                    title name3/Title" href="" title="" target="_blank">[enlace]</a></td>
-                    <td tal:content="python: view.get_date(obj)"></td>
+                  <td colspan="4" style="padding-right:5px;padding-bottom:10px"><img src="++theme++lajornada.portal.theme/imagenes/li_blue.png" /><strong> 
+		  <a tal:attributes="href name3/getURL;
+                    title name3/Title" href="" title="" target="_blank" class="portlet_link2" style="text-decoration:none"><span tal:content="name3/Title"></span></a>
+</strong></td>
                 </tr>
-                <tr>
-                    <td colspan="4"><span tal:content="structure python: obj.tag(scale='thumb')"></span></td>
+            </tal:objeto>
+            </tal:names>
+    </table>
+<!--  FIN -->
+
+
+
+
+      <table width="370px"><tr><td align="center" style="padding-bottom:20px"><img src="++theme++lajornada.portal.theme/imagenes/publicidad.png" /></td></tr></table>
+<!-- VISUALIZACION 1 PORLET-->      
+      <table width="370px">
+	  <tr><td width="50px"  style="padding-left:20px;background-color:#1B65AC"></td><td style="padding-left:10px"><span class="portlet_title">ÚLTIMAS NOTICIAS</span></td></tr>
+	  <tr><td colspan="2">&nbsp;</td></tr>
+	</table>
+        <table>
+            <tal:names repeat="name3 view/result">
+                <tal:objeto define="obj name3/getObject">
+                <tr tal:attributes="class python: 'even' if repeat['name3'].even() else 'odd'">
+                  <td colspan="4" style="padding-right:5px;padding-bottom:10px"><span tal:content="structure python: obj.tag(scale='thumb')"></span></td> 
+		  <td>&nbsp;<a tal:attributes="href name3/getURL;
+                    title name3/Title" href="" title="" target="_blank" class="portlet_link" style="text-decoration:none"><span tal:content="name3/Title"></span></a></td>
                 </tr>
             </tal:objeto>
             </tal:names>
     </table>
     </div>
-
 
     <dd class="portletFooter">
         <span class="portletBottomLeft"></span>

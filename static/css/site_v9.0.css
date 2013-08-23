@@ -228,7 +228,7 @@ li#lsMain-menu-especiales:hover {
 #idMainBodyContainer {
     clear: both;
     width: 1175px;
-    height: 1550px;
+    height: auto;
 }
 #portal-column-content {
     clear: both;
@@ -267,6 +267,7 @@ li#lsMain-menu-especiales:hover {
     float: left;
     width: 470px;
     height: auto;
+    margin-top: -450px;
 }
 
 .clBody-down-middle {
@@ -390,6 +391,14 @@ li#lsMain-menu-especiales:hover {
     font-weight: bold;
     padding: 5px;
     text-align: right;
+}
+
+.clUlMovil {
+    display: table;
+}
+
+.clLimovil {
+    display: table-cell;
 }
 
 .clAdsMovilBlock {
@@ -523,23 +532,97 @@ div.row {
 
 .titulo_nota{
 
-color:#163F78;
-font-weight:bold;
-font-size:26px;
-font-family:"Times New Roman", Times, serif
-
+    color:#163F78;
+    font-weight:bold;
+    font-size:26px;
+    font-family:"Times New Roman", Times, serif
+    
 }
 
 .contenido_nota{
+    
+    font-size:16px;
+    font-family: roboto_condensedregular;
 
-font-size:16px;
-font-family: roboto_condensedregular;
 }
 
 .pie_nota{
 
-font-size:10px;
-font-family:"Times New Roman", Times, serif
+    font-size:10px;
+    font-family:"Times New Roman", Times, serif
+   
+}
 
+/* Principal Viewlet Carousel News */
+
+.galleria-container {
+
+    height: 770px !important;
+
+}
+
+/* End Principal Viewlet Carousel News */
+
+/* Portlets columns */
+div.position-1\:4 {
+
+    margin-left: -99.875% !important;
+
+}
+
+div.position-3\:4 {
+
+    margin-left: -31.875% !important;
+    margin-top: 810px;
+    width: 370px;
+
+}
+
+.clDivHeadVideos {
+    background-image: url('../imagenes/videos_title.png');
+    background-repeat: no-repeat;
+    height: 35px;
+}
+
+.tile-video-description {
+    background-color: #585858;
+    font-family: sans;
+    font-size: 15px;
+    font-weight: normal;
+    color: #FFFFFF;
+    padding: 10px;
+    line-heigth: 18px;
+
+}
+
+.clDivVideosThumb {
+    width: 370px;
+    height: 150px;
+    background-color: #E0E0E0;
+}
+
+.clUlVideosThumb {
+    display: table;
+    width: 370px;
+}
+
+.clLiVideosThumb {
+    display: table-cell;
+}
+
+.contenido_nota {
+    font-size:14px;
+    color:#848484;
+    margin-right:10px;
+}
+
+/* End portlets columns */
+
+.nitf_description{
+
+
+    font-size:18px !important;
+    font-family: roboto_condensedregular !important;
+    color:#000 !important;
 
 }
